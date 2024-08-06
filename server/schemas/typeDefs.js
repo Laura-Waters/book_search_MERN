@@ -1,0 +1,27 @@
+const typeDefs = `
+  type Book {
+    _id: ID!
+    authors: String
+    description: String!
+  }
+
+  type User {
+    _id: ID!
+    username: String!
+    email: String!
+    password: String! 
+    savedBooks: [Book]
+  } 
+
+  type Query {
+    tech: [Tech]
+    matchups(_id: String): [Matchup]
+  }
+
+  type Mutation {
+    createMatchup(tech1: String!, tech2: String!): Matchup
+    createVote(_id: String!, techNum: Int!): Matchup
+  }
+`;
+
+module.exports = typeDefs;   

@@ -19,7 +19,7 @@ const typeDefs = `
   } 
 
   type Query {
-    me: User
+    getSingleUser: User
   }
 
   input BookInput {
